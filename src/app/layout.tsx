@@ -39,24 +39,24 @@ export default function RootLayout({
         </header>
 
         {menuOpen && (
-          <div className=" fixed inset-0 flex justify-end z-50">
-            <div className="bg-black  bg-opacity-60 text-white w-full h-full p-8 flex flex-col space-y-6 shadow-lg animate-slide-in">
-              {/* Botón cerrar */}
-              <button
-                onClick={() => setMenuOpen(false)}
-                className="self-end text-gray-600 text-xl"
-              >
-                ✕
-              </button>
+          /*    <div className=" fixed inset-0 flex justify-end z-50"> */
+          <div className="bg-black fixed inset-0 z-50 text-white w-full h-full p-8 flex flex-col space-y-6 animate-slide-in">
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="self-end text-gray-600 text-xl"
+            >
+              <img src="/cloe.svg" alt="close" className="cursor-pointer w-8 h-8 text-white" />
 
-              <nav className="flex flex-col gap-6 text-lg">
-                <Link href="/" onClick={() => setMenuOpen(false)}>Inicio</Link>
-                <Link href="/servicios" onClick={() => setMenuOpen(false)}>Servicios</Link>
-                <Link href="/doctores" onClick={() => setMenuOpen(false)}>Doctores</Link>
-                <Link href="/contacto" onClick={() => setMenuOpen(false)}>Contacto</Link>
-              </nav>
-            </div>
+            </button>
+
+            <nav className="flex flex-col gap-6 text-lg">
+              <Link href="/" onClick={() => setMenuOpen(false)}>Inicio</Link>
+              <Link href="/servicios" onClick={() => setMenuOpen(false)}>Servicios</Link>
+              <Link href="/doctores" onClick={() => setMenuOpen(false)}>Doctores</Link>
+              <Link href="/contacto" onClick={() => setMenuOpen(false)}>Contacto</Link>
+            </nav>
           </div>
+          /*   </div> */
         )}
 
 

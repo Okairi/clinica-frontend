@@ -6,6 +6,12 @@ export default function Home() {
   return (
 
 
-    <>aaa</>
+    <>
+      <section className="section-banner">
+
+        aaaa
+      </section>
+
+    </>
   )
 }
