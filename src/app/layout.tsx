@@ -2,6 +2,8 @@
 import "./globals.css";
 import Link from "next/link";
 
+import BurgerIcon from "@/assets/burger.svg";
+
 
 export default function RootLayout({
   children,
@@ -13,17 +15,15 @@ export default function RootLayout({
       <body>
         <header className="flex items-center justify-between px-8 py-4">
           <Link href={"/"} className="text-2xl font-bold text-red-500">MiLogo</Link>
-          <nav className="flex gap-6">
+          <nav className="flex gap-6 hidden sm:flex">
             <Link href="/">Inicio</Link>
             <Link href="/login">Servicios</Link>
             <Link href="/registro">Doctores</Link>
             <Link href="/contacto">Contacto</Link>
           </nav>
 
-          <div>
+          <BurgerIcon />
 
-
-          </div>
         </header>
 
 
