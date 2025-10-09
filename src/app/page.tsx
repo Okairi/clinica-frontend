@@ -7,9 +7,17 @@ export default function Home() {
 
 
     <>
+      <p></p>
       <section className="section-banner">
 
-        aaaa
+
+        <div>
+
+
+          <h2>Tu salud, nuestra prioridad</h2>
+          <p>En HealthFirst, nos dedicamos a proporcionar atención médica de calidad con un enfoque en el bienestar del paciente. Nuestro equipo de profesionales altamente capacitados está comprometido con tu salud.</p>
+
+        </div>
       </section>
 
     </>
