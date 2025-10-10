@@ -1,4 +1,5 @@
 "use client"
+
 import { useState } from "react";
 import "./globals.css";
 import Link from "next/link";
@@ -20,7 +21,7 @@ export default function RootLayout({
       <body>
         <header className="flex items-center justify-between px-8 py-4">
           <Link href={"/"} className="text-2xl font-bold text-red-500">MiLogo</Link>
-          <nav className="flex gap-6 hidden sm:flex text-2xl">
+          <nav className="gap-6 hidden sm:flex text-2xl">
             <Link href="/">Inicio</Link>
             <Link href="/servicios">Servicios</Link>
             <Link href="/doctores">Doctores</Link>
@@ -40,7 +41,6 @@ export default function RootLayout({
         </header>
 
         {menuOpen && (
-          /*    <div className=" fixed inset-0 flex justify-end z-50"> */
           <div className="bg-black fixed inset-0 z-50 text-white w-full h-full p-8 flex flex-col space-y-6 animate-slide-in">
             <button
               onClick={() => setMenuOpen(false)}
@@ -60,14 +60,14 @@ export default function RootLayout({
               <Link href="/contacto" onClick={() => setMenuOpen(false)}>Contacto</Link>
             </nav>
           </div>
-          /*   </div> */
+
         )}
 
 
 
         <main className="p-8">{children}</main>
 
-        <footer className="text-center py-4 text-sm text-gray-500 border-t mt-8 absolute bottom-0 w-full">
+        <footer className="text-center py-4 text-[2rem] bottom-0 border-t mt-[40px] sticky w-full">
           © {new Date().getFullYear()} Mi App. Todos los derechos reservados.
         </footer>
       </body>

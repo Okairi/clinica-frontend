@@ -1,3 +1,4 @@
+"use client"
 import { noticiasMedicas } from "@/utils/data/noticias";
 import Button from "./component/button/Button";
 import Card from "./component/Card/Card";
@@ -19,7 +20,7 @@ export default function Home() {
 
       <h2 className="mt-7 text-center text-[3rem]">Noticias actuales</h2>
 
-      <section className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto px-4">
+      <section className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full  mx-auto px-4 max-w-[120rem]">
         {noticiasMedicas.map((noticia) => (
           <Card
             key={noticia.id}
