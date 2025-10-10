@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
-        <header className="flex items-center justify-between px-8 py-4">
-          <Link href={"/"} className="text-2xl font-bold text-red-500">MiLogo</Link>
-          <nav className="gap-6 hidden sm:flex text-2xl">
+        <header className="flex items-center justify-between px-8 py-6 fixed top-0 left-0 w-full bg-white z-50 shadow-md">
+          <Link href={"/"} className="text-3xl font-bold text-[#4a90e2]">Clinica de los Dioses</Link>
+          <nav className="gap-6 hidden sm:flex text-3xl">
             <Link href="/">Inicio</Link>
             <Link href="/servicios">Servicios</Link>
             <Link href="/doctores">Doctores</Link>
@@ -39,6 +39,7 @@ export default function RootLayout({
 
 
         </header>
+        <div className="mb-20"></div>
 
         {menuOpen && (
           <div className="bg-black fixed inset-0 z-50 text-white w-full h-full p-8 flex flex-col space-y-6 animate-slide-in">
@@ -67,7 +68,7 @@ export default function RootLayout({
 
         <main className="p-8">{children}</main>
 
-        <footer className="text-center py-4 text-[2rem] bottom-0 border-t mt-[40px] sticky w-full">
+        <footer className="text-center py-4 text-[2rem] bottom-0 border-t mt-[40px] relative w-full">
           © {new Date().getFullYear()} Mi App. Todos los derechos reservados.
         </footer>
       </body>
