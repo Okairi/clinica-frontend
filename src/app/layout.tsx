@@ -20,7 +20,7 @@ export default function RootLayout({
       <body>
         <header className="flex items-center justify-between px-8 py-4">
           <Link href={"/"} className="text-2xl font-bold text-red-500">MiLogo</Link>
-          <nav className="flex gap-6 hidden sm:flex">
+          <nav className="flex gap-6 hidden sm:flex text-2xl">
             <Link href="/">Inicio</Link>
             <Link href="/servicios">Servicios</Link>
             <Link href="/doctores">Doctores</Link>
@@ -31,8 +31,9 @@ export default function RootLayout({
             setMenuOpen(true)
           }}  >
 
-
-            <img src="/burger.svg" alt="Menú" className="cursor-pointer w-8 h-8" />
+            <picture>
+              <img src="/burger.svg" alt="Menú" className="cursor-pointer w-8 h-8" />
+            </picture>
           </button>
 
 
@@ -45,11 +46,14 @@ export default function RootLayout({
               onClick={() => setMenuOpen(false)}
               className="self-end text-gray-600 text-xl"
             >
-              <img src="/cloe.svg" alt="close" className="cursor-pointer w-8 h-8 text-white" />
+              <picture>
 
+                <img src="/cloe.svg" alt="close" className="cursor-pointer w-8 h-8 text-white" />
+
+              </picture>
             </button>
 
-            <nav className="flex flex-col gap-6 text-lg">
+            <nav className="flex flex-col gap-6 text-3xl">
               <Link href="/" onClick={() => setMenuOpen(false)}>Inicio</Link>
               <Link href="/servicios" onClick={() => setMenuOpen(false)}>Servicios</Link>
               <Link href="/doctores" onClick={() => setMenuOpen(false)}>Doctores</Link>

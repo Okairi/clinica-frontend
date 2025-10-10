@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+:root {
+  --primary-color: #4a90e2;
+  --text-color-light: #ffffff;
+  --text-color-dark: #333333;
+  --overlay-color: rgba(0, 0, 0, 0.4);
+}
+
 /* normalize */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -396,7 +403,7 @@ img {
 .section-banner {
   width: 100%;
   height: 33.5rem;
-  background-image: url("/img/char2.png");
+  background-image: url("/img/chair3.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -405,16 +412,27 @@ img {
 
   /* flex */
   display: flex;
-  justify-content: start;
-  align-items: center;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
 }
 
 .section-banner h2 {
   color: white;
-  font-weight: 600;
-  font-size: 2.5rem;
+  font-weight: 900;
+  font-size: 2.6rem;
 }
 
 .section-banner p {
   color: white;
+  font-size: 1.7rem;
+  font-weight: 600;
 }
+
+/* h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+ */
