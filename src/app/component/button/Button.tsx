@@ -17,7 +17,7 @@ export default function Button({
 
 }>) {
     return (
-        <button style={{ backgroundColor, color, fontSize: size }} className={`px-4 py-2 rounded-md transition-colors ${className} cursor-pointer`}
+        <button style={{ backgroundColor, color, fontSize: size }} className={`px-4 rounded-md transition-colors ${className} cursor-pointer`}
             disabled={true}
 
         >
