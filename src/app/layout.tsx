@@ -5,20 +5,16 @@ import "./globals.css";
 import Link from "next/link";
 
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-
   const [menuOpen, setMenuOpen] = useState(false)
-
 
   return (
     <html lang="es">
-      <body>
+      <body className="flex flex-col min-h-screen">
         <header className="flex items-center justify-between px-8 py-6 fixed top-0 left-0 w-full bg-white z-50 shadow-md">
           <Link href={"/"} className="text-3xl font-bold text-[#4a90e2]">Clinica de los Dioses</Link>
           <nav className="gap-6 hidden sm:flex text-3xl">
@@ -28,17 +24,13 @@ export default function RootLayout({
             <Link href="/contacto">Contacto</Link>
           </nav>
 
-          <button className="md:hidden" onClick={() => {
-            setMenuOpen(true)
-          }}  >
-
+          <button className="md:hidden" onClick={() => setMenuOpen(true)}>
             <picture>
               <img src="/burger.svg" alt="Menú" className="cursor-pointer w-8 h-8" />
             </picture>
           </button>
-
-
         </header>
+
         <div className="mb-20"></div>
 
         {menuOpen && (
@@ -48,9 +40,7 @@ export default function RootLayout({
               className="self-end text-gray-600 text-xl"
             >
               <picture>
-
                 <img src="/cloe.svg" alt="close" className="cursor-pointer w-8 h-8 text-white" />
-
               </picture>
             </button>
 
@@ -61,17 +51,16 @@ export default function RootLayout({
               <Link href="/contacto" onClick={() => setMenuOpen(false)}>Contacto</Link>
             </nav>
           </div>
-
         )}
 
+        <main className="flex-1 p-8">
+          {children}
+        </main>
 
-
-        <main className="p-8">{children}</main>
-
-        <footer className="text-center py-4 text-[2rem] bottom-0 border-t mt-[40px] relative w-full">
-          © {new Date().getFullYear()} Mi App. Todos los derechos reservados.
+        <footer className="text-center py-4 text-[2rem] border-t mt-auto">
+          © Todos los derechos reservados.
         </footer>
       </body>
-    </html >
+    </html>
   );
 }
