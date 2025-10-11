@@ -57,7 +57,7 @@ export default function RootLayout({
           {children}
         </main>
 
-        <footer className="text-center py-4 text-[2rem] border-t mt-auto">
+        <footer className="text-center p-8 text-[2rem] border-t mt-auto">
           © Todos los derechos reservados.
         </footer>
       </body>

@@ -15,10 +15,11 @@ export default function Home() {
           backgroundColor="#4a90e2"
           color="white"
           size="1.6rem"
+          className="py-3"
         />
       </section>
 
-      <h2 className="mt-7 text-center text-[3rem]">Noticias actuales</h2>
+      <h2 className="text-center text-[4rem] font-bold text-[#4a90e2] mt-20 mb-15">Noticias actuales</h2>
 
       <section className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full  mx-auto px-4 max-w-[120rem]">
         {noticiasMedicas.map((noticia) => (
